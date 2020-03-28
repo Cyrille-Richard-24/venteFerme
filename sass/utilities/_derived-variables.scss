@@ -1,0 +1,30 @@
+// General colors
+$bg-dark: $black !default;
+$bg-grey-light: $grey-light !default;
+$bg-grey-dark: $grey-dark !default;
+$bg-orange: $orange !default;
+$bg-green: $green !default;
+
+// Heading colors
+$heading-color-primary: $grey-light !default;
+$heading-color-secondary: $black !default;
+$heading-color-tertiary: $orange !default;
+$heading-color-quaternary: $green !default;
+
+// Paragraph & text colors
+$text-color-primary: $grey-light !default;
+$text-color-secondary:$white !default;
+$text-color-tertiary: $orange !default;
+$text-color-quaternary: $green !default;
+
+// Link colors
+$link-color: $text-color-primary !default;
+$link-color-primary-hover: $text-color-tertiary !default;
+$link-color-secondary-hover: $text-color-quaternary !default;
+
+// Responsiveness
+$mobile: $breakpoints, mobile !default;
+$tablet: $breakpoints, tablet !default;
+$desktop: $breakpoints, desktop !default;
+$widescreen: $breakpoints, widescreen !default;
+$fullhd: $breakpoints, fullhd !default;

@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../public/fonts/Roboto/Roboto-Black.ttf), url(../../public/fonts/Roboto/Roboto-BlackItalic.ttf), url(../../public/fonts/Roboto/Roboto-Bold.ttf), url(../../public/fonts/Roboto/Roboto-BoldItalic.ttf), url(../../public/fonts/Roboto/Roboto-Italic.ttf), url(../../public/fonts/Roboto/Roboto-Light.ttf), url(../../public/fonts/Roboto/Roboto-LightItalic.ttf), url(../../public/fonts/Roboto/Roboto-Medium.ttf), url(../../public/fonts/Roboto/Roboto-MediumItalic.ttf), url(../../public/fonts/Roboto/Roboto-Regular.ttf), url(../../public/fonts/Roboto/Roboto-Thin.ttf), url(../../public/fonts/Roboto/Roboto-ThinItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Sofia';
+  src: url(../../public/fonts/Sofia/Sofia-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Gupter';
+  src: url(../../public/fonts/Gupter/Gupter-Bold.ttf), url(../../public/fonts/Gupter/Gupter-Medium.ttf), url(../../public/fonts/Gupter/Gupter-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Open-sans';
+  src: url(../../public/fonts/Open/OpenSans-Bold.ttf), url(../../public/fonts/Open/OpenSans-BoldItalic.ttf), url(../../public/fonts/Open/OpenSans-ExtraBold.ttf), url(../../public/fonts/Open/OpenSans-ExtraBoldItalic.ttf), url(../../public/fonts/Open/OpenSans-Italic.ttf), url(../../public/fonts/Open/OpenSans-Light.ttf), url(../../public/fonts/Open/OpenSans-LightItalic.ttf), url(../../public/fonts/Open/OpenSans-Regular.ttf), url(../../public/fonts/Open/OpenSans-SemiBold.ttf), url(../../public/fonts/Open/OpenSans-SemiBoldItalic.ttf);
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.grid-container {
+  margin: 15px 20px 15px 20px;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: header;
+}
+
+.section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-area: section;
+}
+
+.aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-area: aside;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-area: footer;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas: 'header header header header header header header header header header header header' 'section section section section section section section section . aside aside aside' 'footer footer footer footer footer footer footer footerfooter footer footer footer';
+}
+/*# sourceMappingURL=style.css.map */

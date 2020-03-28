@@ -1,0 +1,37 @@
+@mixin flexAlign($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin bg-border($color, $radius) {
+    border: 1px solid $color;
+    border-radius: $radius;
+    background-color: $color;
+}
+
+@mixin link($transform, $style, $fontFamily, $size, $color, $colorHover) {
+    text-transform: $transform;
+    font-style: $style;
+    font-family: $fontFamily;
+    font-size: $size;
+    color: $color;
+    &:hover { color: $colorHover; }
+}
+
+@mixin active-link ($color, $radius, $text-color) {
+    @include bg-border($color, $radius);
+    color: $text-color !important;
+}
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}

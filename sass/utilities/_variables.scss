@@ -1,0 +1,35 @@
+// Colors
+$black: #3A3A3C !default;
+
+$white: white !default;
+
+$grey-light: #E5E5E5 !default;
+$grey-dark: #C4C4C4 !default;
+
+$orange: #F58C21 !default;
+$green: #8BC540 !default;
+
+// Typography
+$family-roboto: 'Roboto', 'Arial', sans-serif !default;
+$family-sofia: 'Sofia', 'Arial', sans-serif !default;
+$family-Gupter: 'Gupter', 'Arial', sans-serif !default;
+$family-OpenSans: 'Open', sans-serif !default;
+
+// Breakpoints
+$breakpoints: (
+    mobile: 600px,
+    tablet: 769px,
+    desktop: 960px,
+    widescreen: 1152px,
+    fullhd: 1344px
+);
+
+// Img
+$size-img-width: 100%;
+
+// Radius
+$radius-full: 10px;
+$radius-top: 10px 10px 0 0;
+$radius-right: 0 10px 10px 0;
+$radius-bottom: 0 0 10px 10px;
+$radius-left: 10px 0 0 10px;

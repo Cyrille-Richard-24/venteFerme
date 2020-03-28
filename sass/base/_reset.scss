@@ -1,0 +1,34 @@
+//Block
+html,
+body,
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+//Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+// Box sizing
+html {
+    box-sizing: border-box;
+}
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
