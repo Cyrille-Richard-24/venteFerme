@@ -3,3 +3,20 @@ $margin-container : 15px 20px 15px 20px;
 .grid-container {
     margin: $margin-container;
 }
+.body {
+    background-color: $bg-grey-light;
+}
+
+h1,
+h2,
+h3 {
+    color: $heading-color-primary;
+}
+p { color: $text-color-primary;}
+a {
+    text-decoration: none;
+    color: $link-color-primary;
+    &:hover {
+        color: $link-color-primary-hover;
+    }
+}

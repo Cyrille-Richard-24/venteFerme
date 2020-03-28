@@ -1,0 +1,49 @@
+// Margin
+$margin-topbar : 0 0 10px 0;
+$margin-header-title: 10px 0 10px 10px;
+$margin-language: 0 30px 0 0;
+$margin-language-english: 0 0 0 20px;
+$margin-language-img: 0 5px 0 0;
+$margin-navbar-link: 0 10px 5px 0;
+$margin-navbar-i: 0 5px 0 0;
+
+// Padding
+$padding-navbar: 0 0 0 20px;
+$padding-navbar-link: 0 10px 5px 0;
+$padding-navbar-active: 1px 8px 0 8px;
+$padding-navbar-sticky: 15px 0 15px 20px;
+
+// Size
+$size-header-title: 2.5rem;
+$size-customer-name: 1.5rem;
+$size-language: 0.9rem;
+$size-navbar-link: 1rem;
+
+// Font-family
+$fontFamily-header-title: $family-sofia;
+$fontFamily-customer-name: $family-sofia;
+$fontFamily-language: $family-Gupter;
+$fontFamily-navbar: $family-OpenSans;
+
+.header {
+    @include flexAlign(null, null);
+    flex-direction: column;
+    @include bg-border($bg-dark, $radius-full);
+    &__topbar {
+        margin-bottom: $margin-topbar;
+        @include flexAlign(space-between, normal);
+        &__logo-title {
+            .header-title {
+                @include flexAlign(normal, center);
+            }
+        }
+        &__customer-name {
+            @include flexAlign(normal, center);
+        }
+        &__language {
+            @include flexAlign(normal, center);
+        }
+    }
+    &__navbar {
+    }
+}
