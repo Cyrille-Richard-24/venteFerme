@@ -70,6 +70,8 @@ $fontFamily-navbar: $family-OpenSans;
     &.sticky {
         position: fixed;
         top: 0;
-        width: 97.47%;
+        right: 0;
+        left: 0;
+        margin: 0 20px 0 20px;
     }
 }

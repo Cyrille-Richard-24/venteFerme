@@ -1,0 +1,84 @@
+// Width
+$width-mobile-img: $size-img-width / 4;
+$width-tablet-img: $size-img-width /2;
+
+// Margin
+$margin-mobile-header-title: 10px 0 0 10px !important;
+$margin-mobile-customer-name: 0 auto 5px auto !important;
+$margin-mobile-language: 0 0 5px 5px !important;
+$margin-mobile-navbar: 5px 0 0 0 !important;
+
+$margin-tablet-customer-name: 0 auto 5px auto !important;
+$margin-tablet-language: 0 0 5px 20px !important;
+$margin-tablet-navbar: 10px 0 0 0 !important;
+
+// Padding
+
+// Size
+$size-mobile-header-title: 1.2rem !important;
+$size-mobile-customer-name: 1.3rem !important;
+$size-mobile-language: 0.7rem !important;
+$size-mobile-navbar: 0.9rem !important;
+
+$size-tablet-customer-name: 1.6rem !important;
+
+$size-desktop-header-title: 1.9rem !important;
+
+@include mobile {
+    .header {
+        &__topbar {
+            flex-direction: column;
+            &__logo-title {
+                img { width: $width-mobile-img;}
+                a { font-size: $size-mobile-header-title; }
+            }
+            &__customer-name {
+                margin: $margin-mobile-customer-name;
+                font-size: $size-mobile-customer-name;
+            }
+            &__language { margin: $margin-mobile-language; }
+        }
+        &__navbar {
+            margin: $margin-mobile-navbar;
+            a {
+                font-size: $size-mobile-navbar;
+                &:not(:first-child) { display: none !important; }
+                &.icon {
+                float: right;
+                display: block !important;
+                }
+            }
+            &.responsive {
+                position: relative;
+                a {
+                    float: none;
+                    display: block !important;
+                    text-align: left;
+                }
+                .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .header {
+        &__topbar {
+            flex-direction: column;
+            &__customer-name {
+                margin: $margin-tablet-customer-name;
+                font-size: $size-tablet-customer-name;
+            }
+            &__language { margin: $margin-tablet-language; }
+        }
+        &__navbar { margin: $margin-tablet-navbar; }
+    }
+}
+
+@include desktop {
+    .header-title { font-size: $size-desktop-header-title; }
+}

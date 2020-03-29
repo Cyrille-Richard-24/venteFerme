@@ -35,3 +35,9 @@
         @content;
     }
 }
+
+@mixin desktop {
+    @media screen and (max-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}

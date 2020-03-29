@@ -18,6 +18,79 @@
   src: url(../../public/fonts/Open/OpenSans-Bold.ttf), url(../../public/fonts/Open/OpenSans-BoldItalic.ttf), url(../../public/fonts/Open/OpenSans-ExtraBold.ttf), url(../../public/fonts/Open/OpenSans-ExtraBoldItalic.ttf), url(../../public/fonts/Open/OpenSans-Italic.ttf), url(../../public/fonts/Open/OpenSans-Light.ttf), url(../../public/fonts/Open/OpenSans-LightItalic.ttf), url(../../public/fonts/Open/OpenSans-Regular.ttf), url(../../public/fonts/Open/OpenSans-SemiBold.ttf), url(../../public/fonts/Open/OpenSans-SemiBoldItalic.ttf);
 }
 
+@media screen and (max-width: 600px) {
+  .header__topbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__topbar__logo-title img {
+    width: 25%;
+  }
+  .header__topbar__logo-title a {
+    font-size: 1.2rem !important;
+  }
+  .header__topbar__customer-name {
+    margin: 0 auto 5px auto !important;
+    font-size: 1.3rem !important;
+  }
+  .header__topbar__language {
+    margin: 0 0 5px 5px !important;
+  }
+  .header__navbar {
+    margin: 5px 0 0 0 !important;
+  }
+  .header__navbar a {
+    font-size: 0.9rem !important;
+  }
+  .header__navbar a:not(:first-child) {
+    display: none !important;
+  }
+  .header__navbar a.icon {
+    float: right;
+    display: block !important;
+  }
+  .header__navbar.responsive {
+    position: relative;
+  }
+  .header__navbar.responsive a {
+    float: none;
+    display: block !important;
+    text-align: left;
+  }
+  .header__navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header__topbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__topbar__customer-name {
+    margin: 0 auto 5px auto !important;
+    font-size: 1.6rem !important;
+  }
+  .header__topbar__language {
+    margin: 0 0 5px 20px !important;
+  }
+  .header__navbar {
+    margin: 10px 0 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header-title {
+    font-size: 1.9rem !important;
+  }
+}
+
 html,
 body,
 p,
@@ -218,6 +291,8 @@ a:hover {
 .header.sticky {
   position: fixed;
   top: 0;
-  width: 97.47%;
+  right: 0;
+  left: 0;
+  margin: 0 20px 0 20px;
 }
 /*# sourceMappingURL=style.css.map */
