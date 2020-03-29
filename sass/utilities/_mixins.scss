@@ -4,10 +4,11 @@
     align-items: $align;
 }
 
-@mixin bg-border($color, $radius) {
+@mixin bg-border($color, $radius, $text-color) {
     border: 1px solid $color;
     border-radius: $radius;
     background-color: $color;
+    color: $text-color;
 }
 
 @mixin link($transform, $style, $fontFamily, $size, $color, $colorHover) {

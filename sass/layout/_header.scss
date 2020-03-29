@@ -6,12 +6,14 @@ $margin-language-english: 0 0 0 20px;
 $margin-language-img: 0 5px 0 0;
 $margin-navbar-link: 0 10px 5px 0;
 $margin-navbar-i: 0 5px 0 0;
+$margin-navbar-active: -4px 5px 0 0;
 
 // Padding
 $padding-navbar: 0 0 0 20px;
 $padding-navbar-link: 0 10px 5px 0;
 $padding-navbar-active: 1px 8px 0 8px;
 $padding-navbar-sticky: 15px 0 15px 20px;
+$padding-navbar-active: 2px 5px 2px 5px;
 
 // Size
 $size-header-title: 2.5rem;
@@ -28,7 +30,7 @@ $fontFamily-navbar: $family-OpenSans;
 .header {
     @include flexAlign(null, null);
     flex-direction: column;
-    @include bg-border($bg-dark, $radius-full);
+    @include bg-border($bg-dark, $radius-full, null);
     &__topbar {
         margin-bottom: $margin-topbar;
         @include flexAlign(space-between, normal);
@@ -50,6 +52,7 @@ $fontFamily-navbar: $family-OpenSans;
             .link { @include link(uppercase, null, $fontFamily-language, $size-language, null, null); }
             .english { margin: $margin-language-english;}
             img { margin: $margin-language-img;}
+            .active { @include link(null, italic, $fontFamily-language, $size-language, $text-color-tertiary, null); }
         }
     }
     &__navbar {
@@ -57,6 +60,12 @@ $fontFamily-navbar: $family-OpenSans;
         .link { 
             @include link(null, null, $fontFamily-navbar, $size-navbar, null, null);
             margin: $margin-navbar-link;
+        }
+        .active {
+            @include bg-border($bg-orange, $radius-full, $white);
+            padding: $padding-navbar-active;
+            margin: $margin-navbar-active;
+            
         }
         a {
             float: left;
