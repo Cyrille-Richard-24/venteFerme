@@ -1,5 +1,5 @@
 // Margin
-$margin-topbar : 0 0 10px 0;
+$margin-topbar: 0 0 10px 0;
 $margin-header-title: 10px 0 10px 10px;
 $margin-language: 0 30px 0 0;
 $margin-language-english: 0 0 0 20px;
@@ -17,7 +17,7 @@ $padding-navbar-sticky: 15px 0 15px 20px;
 $size-header-title: 2.5rem;
 $size-customer-name: 1.5rem;
 $size-language: 0.9rem;
-$size-navbar-link: 1rem;
+$size-navbar: 1rem;
 
 // Font-family
 $fontFamily-header-title: $family-sofia;
@@ -33,17 +33,43 @@ $fontFamily-navbar: $family-OpenSans;
         margin-bottom: $margin-topbar;
         @include flexAlign(space-between, normal);
         &__logo-title {
+            margin: $margin-header-title;
+            .link { @include link(null, null, $fontFamily-header-title, $size-header-title, null, null); }
             .header-title {
                 @include flexAlign(normal, center);
             }
         }
         &__customer-name {
             @include flexAlign(normal, center);
+            font-family: $fontFamily-customer-name;
+            font-size: $size-customer-name;
         }
         &__language {
             @include flexAlign(normal, center);
+            margin: $margin-language;
+            .link { @include link(uppercase, null, $fontFamily-language, $size-language, null, null); }
+            .english { margin: $margin-language-english;}
+            img { margin: $margin-language-img;}
         }
     }
     &__navbar {
+        padding: $padding-navbar;
+        .link { 
+            @include link(null, null, $fontFamily-navbar, $size-navbar, null, null);
+            margin: $margin-navbar-link;
+        }
+        a {
+            float: left;
+            display: block;
+            text-align: center;
+            padding: $padding-navbar-link;
+        }
+        .icon { display: none; }
+        i { margin: $margin-navbar-i; }
+    }
+    &.sticky {
+        position: fixed;
+        top: 0;
+        width: 97.47%;
     }
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="grid-container">
-        <header class="header">
+        <header class="header" id="header">
             <div class="header__topbar">
                 <div class="header__topbar__logo-title">
                     <a href="index.html" class="header-title link">
@@ -41,9 +41,11 @@
                 <a href="#" class="link"><i class="fas fa-user-circle"></i>Compte</a>
                 <a href="#" class="link"><i class="fas fa-envelope"></i>Contact</a>
                 <a href="#" class="link"><i class="fas fa-shopping-cart"></i>Panier</a>
+                <a href="javascript:void(0);" class="link icon" onclick="myFunction();responsive();"><i class="fa fa-bars"></i></a>
+        </nav>
             </div>
         </header>
-        <section class="section">
+        <section class="section" style="height: 2000px;">
             <article class="illustration">
 
             </article>
@@ -72,5 +74,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="./public/js/sticky-header.js"></script>
 </body>
 </html>
