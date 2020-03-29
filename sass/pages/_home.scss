@@ -1,0 +1,44 @@
+// Width
+$width-illustration-img: $size-img-width / 3.1;
+
+// Margin
+$margin-illustration: 10px 0 0 0;
+$margin-illustration-heading: 10px 0 0 0;
+$margin-illustration-img: 0 10px 0 10px;
+
+// Padding
+$padding-illustration: 0 0 10px 0;
+$padding-illustration-heading: 5px 15px 0 15px;
+$padding-illustration-img: 10px 0 10px 0;
+
+// Size
+$size-illustration-heading: 2.5rem;
+
+// Font-family
+$fontFamily-illustration-heading: $family-sofia;
+
+.illustration {
+    margin: $margin-illustration;
+    padding: $padding-illustration;
+    text-align: center;
+    @include bg-border($bg-grey-dark, $radius-full, null);
+    h1 {
+        display: inline-block;
+        position: relative;
+        margin: $margin-illustration-heading;
+        padding: $padding-illustration-heading;
+        @include bg-border($bg-black, $radius-top, $heading-color-tertiary);
+        font-size: $size-illustration-heading;
+        font-family: $fontFamily-illustration-heading;
+    }
+    &__img {
+        @include flexAlign(space-around, normal);
+        @include bg-border($bg-black, $radius-full, null);
+        margin: $margin-illustration-img;
+        padding: $padding-illustration-img;
+        img {
+            width: $width-illustration-img;
+        }
+        
+    }
+}

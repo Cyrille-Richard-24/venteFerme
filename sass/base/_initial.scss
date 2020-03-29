@@ -1,11 +1,9 @@
 $margin-container : 15px 20px 15px 20px;
 
-.grid-container {
-    margin: $margin-container;
-}
-.body {
+html {
     background-color: $bg-grey-light;
 }
+.grid-container { margin: $margin-container; }
 
 h1,
 h2,
@@ -16,7 +14,5 @@ p { color: $text-color-primary;}
 a {
     text-decoration: none;
     color: $link-color-primary;
-    &:hover {
-        color: $link-color-primary-hover;
-    }
+    &:hover { color: $link-color-primary-hover; }
 }
