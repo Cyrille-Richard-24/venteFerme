@@ -10,6 +10,11 @@ $margin-selection-item: 5px 0 10px 0;
 $margin-selection-heading-level3: -4px 4px 0 4px;
 $margin-selection-heading-level2: 10px 0 10px 0;
 $margin-selection-img: 5px 5px 5px 5px;
+$margin-promotion: 0 0 10px 0;
+$margin-promotion-item: 5px 0 10px 0;
+$margin-promotion-heading-level3: -4px 4px 0 4px;
+$margin-promotion-heading-level2: 10px 0 10px 0;
+$margin-promotion-img: 5px 5px 5px 5px;
 
 // Padding
 $padding-illustration: 0 0 10px 0;
@@ -17,14 +22,20 @@ $padding-illustration-heading: 5px 15px 0 15px;
 $padding-illustration-img: 10px 0 10px 0;
 $padding-selection: 10px 10px 10px 10px;
 $padding-selection-item: 0 0 10px 0;
+$padding-promotion: 10px 10px 10px 10px;
+$padding-promotion-item: 0 0 10px 0;
 
 // Size
 $size-illustration-heading: 2.5rem;
 $size-selection-heading-level2: 2rem;
+$size-promotion-heading-level2: 2rem;
 
 // Font-family
 $fontFamily-illustration-heading: $family-sofia;
+$fontFamily-illustration-heading: $family-sofia;
 $fontFamily-selection-heading-level2: $family-sofia;
+$fontFamily-promotion-heading-level2: $family-sofia;
+
 .illustration {
     margin: $margin-illustration;
     padding: $padding-illustration;
@@ -95,7 +106,7 @@ $fontFamily-selection-heading-level2: $family-sofia;
 .selection {
     @include bg-border($bg-grey-dark, $radius-full, null);
     padding: $padding-selection;
-    margin-bottom: $margin-selection;
+    margin: $margin-selection;
     &__item {
         @include bg-border($bg-dark, $radius-full, null) ;
         margin: $margin-selection-item;
@@ -137,7 +148,53 @@ $fontFamily-selection-heading-level2: $family-sofia;
             color: $heading-color-tertiary;
             font-family: $fontFamily-selection-heading-level2;
         }
-    }
+    } 
+}
 
-    
+.promotion {
+    @include bg-border($bg-grey-dark, $radius-full, null);
+    padding: $padding-promotion;
+    margin: $margin-promotion;
+    &__item {
+        @include bg-border($bg-dark, $radius-full, null) ;
+        margin: $margin-promotion-item;
+        padding: $padding-promotion-item;
+        &__firstRow {
+            @include flexAlign(space-around, normal);
+            &__product {
+                h3 {
+                    margin: $margin-promotion-heading-level3;
+                    text-align: center;
+                    color: $white;
+                    background-color: $bg-orange;
+                    border-radius: $radius-full;
+                }
+                img {
+                    margin: $margin-promotion-img;
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+        }
+        &__secondRow {
+            @include flexAlign(space-around, normal);
+            h3 {
+                @include bg-border($bg-orange, $radius-full, $white);
+                margin: $margin-promotion-heading-level3;
+                text-align: center;
+            }
+            img {
+                margin: $margin-promotion-img;
+                width: 300px;
+                height: 200px;
+            }
+        }
+        h2 {
+            margin: $margin-promotion-heading-level2;
+            text-align: center;
+            font-size: $size-promotion-heading-level2;
+            color: $heading-color-tertiary;
+            font-family: $fontFamily-promotion-heading-level2;
+        }
+    }
 }

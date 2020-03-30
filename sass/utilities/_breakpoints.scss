@@ -13,8 +13,10 @@ $margin-tablet-language: 0 0 5px 20px !important;
 $margin-tablet-navbar: 10px 0 0 0 !important;
 
 // Padding
-$padding-mobile-item: 0 0 10px 0;
-$padding-tablet-item: 0 0 10px 0;
+$padding-mobile-selection-item: 0 0 10px 0;
+$padding-tablet-selection-item: 0 0 10px 0;
+$padding-mobile-promotion-item: 0 0 10px 0;
+$padding-tablet-promotion-item: 0 0 10px 0;
 
 // Size
 $size-mobile-header-title: 1.2rem !important;
@@ -87,16 +89,32 @@ $size-desktop-header-title: 1.9rem !important;
         &__item {
             display: flex;
             flex-direction: column;
-            padding: $padding-mobile-item;
-          &__firstRow, &__secondRow {
-              flex-direction: column;
-              img {
-                  margin: 10px 50px !important;
-              }
-          }
-          h2 {
-                  order: -1;
-              }
+            padding: $padding-mobile-selection-item;
+            &__firstRow, &__secondRow {
+                flex-direction: column;
+                img {
+                    margin: 10px 50px !important;
+                }
+            }
+            h2 {
+                order: -1;
+            }
+        }
+    }
+    .promotion {
+        &__item {
+            display: flex;
+            flex-direction: column;
+            padding: $padding-mobile-promotion-item;
+            &__firstRow, &__secondRow {
+                flex-direction: column;
+                img {
+                    margin: 10px 50px !important;
+                }
+            }
+            h2 {
+                order: -1;
+            }
         }
     }
 }
@@ -124,7 +142,16 @@ $size-desktop-header-title: 1.9rem !important;
     }
     .selection {
         &__item {
-            padding: $padding-tablet-item;
+            padding: $padding-tablet-selection-item;
+        }
+        img {
+            width: 200px !important;
+            height: 133px !important;
+        }
+    }
+    .promotion {
+        &__item {
+            padding: $padding-tablet-promotion-item;
         }
         img {
             width: 200px !important;
