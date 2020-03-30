@@ -39,6 +39,47 @@ $fontFamily-illustration-heading: $family-sofia;
         img {
             width: $width-illustration-img;
         }
-        
+    }
+}
+
+.about {
+    @include flexAlign(space-around, center);
+    padding: 0 5px;
+    margin: 10px 0;
+    @include bg-border($bg-grey-dark, $radius-full, null);
+    &__content {
+        align-self: start;
+        @include bg-border($bg-dark, $radius-full, null);
+        margin: 10px 5px 0;
+        text-indent: 15px;
+        padding: 0 0 5px 5px;
+        h2 {
+        padding-top: 5px;
+        text-align: center;
+        font-size: 2rem;
+        font-family: $family-sofia;
+        color: $heading-color-tertiary;
+        }
+    }
+    
+    &__slide1 {
+        margin: 10px 0 25px;
+        min-width: 320px;
+        height: 198.4px;
+        -webkit-box-shadow: 0px 15px 10px -5px #777;
+        box-shadow: 0px 15px 10px -5px #777;
+        background-size: contain;
+        margin-left: 10px;
+        animation: slide1 15s ease-in-out infinite both;
+    }
+    &__slide2 {
+        margin: 10px 0 25px;
+        min-width: 320px;
+        height: 198.4px;
+        -webkit-box-shadow: 0px 15px 10px -5px #777;
+        box-shadow: 0px 15px 10px -5px #777;
+        background-size: contain;
+        margin-right: 10px;
+        animation: slide2 15s ease-in-out infinite both;
     }
 }

@@ -20,6 +20,7 @@ $size-mobile-customer-name: 1.3rem !important;
 $size-mobile-language: 0.7rem !important;
 $size-mobile-navbar: 0.9rem !important;
 $size-mobile-illustration-heading: 1.3rem !important;
+$size-mobile-content-heading: 1.3rem !important;
 
 $size-tablet-customer-name: 1.6rem !important;
 
@@ -70,6 +71,16 @@ $size-desktop-header-title: 1.9rem !important;
     .illustration {
         h1 {font-size: $size-mobile-illustration-heading; }
     }
+    .about {
+        &__slide1, &__slide2 {
+            display: none;
+        }
+        &__content {
+            h2 {
+                font-size: $size-mobile-content-heading;
+            }  
+        }
+    }
 }
 
 @include tablet {
@@ -87,8 +98,11 @@ $size-desktop-header-title: 1.9rem !important;
         }
         &__navbar { margin: $margin-tablet-navbar; }
     }
-    .grid-container {
-        grid-template-columns: 1fr;
+    .about {
+        flex-wrap: wrap;
+        &__content {
+            order: -1;
+        }
     }
 }
 

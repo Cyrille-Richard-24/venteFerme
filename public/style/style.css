@@ -71,6 +71,12 @@
   .illustration h1 {
     font-size: 1.3rem !important;
   }
+  .about__slide1, .about__slide2 {
+    display: none;
+  }
+  .about__content h2 {
+    font-size: 1.3rem !important;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -94,9 +100,14 @@
   .header__navbar {
     margin: 10px 0 0 0 !important;
   }
-  .grid-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+  .about {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about__content {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 
@@ -161,6 +172,78 @@ a {
 
 a:hover {
   color: #F58C21;
+}
+
+@-webkit-keyframes slide1 {
+  0% {
+    background-image: url("../../public/img/banner/agneau.jpg");
+  }
+  25% {
+    background-image: url("../../public/img/banner/canard.jpg");
+  }
+  50% {
+    background-image: url("../../public/img/banner/dindon.jpg");
+  }
+  75% {
+    background-image: url("../../public/img/banner/lapin.jpg");
+  }
+  100% {
+    background-image: url("../../public/img/banner/agneau.jpg");
+  }
+}
+
+@keyframes slide1 {
+  0% {
+    background-image: url("../../public/img/banner/agneau.jpg");
+  }
+  25% {
+    background-image: url("../../public/img/banner/canard.jpg");
+  }
+  50% {
+    background-image: url("../../public/img/banner/dindon.jpg");
+  }
+  75% {
+    background-image: url("../../public/img/banner/lapin.jpg");
+  }
+  100% {
+    background-image: url("../../public/img/banner/agneau.jpg");
+  }
+}
+
+@-webkit-keyframes slide2 {
+  0% {
+    background-image: url("../../public/img/banner/pintade.jpg");
+  }
+  25% {
+    background-image: url("../../public/img/banner/porc.jpg");
+  }
+  50% {
+    background-image: url("../../public/img/banner/poule.jpg");
+  }
+  75% {
+    background-image: url("../../public/img/banner/veau.jpg");
+  }
+  100% {
+    background-image: url("../../public/img/banner/pintade.jpg");
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    background-image: url("../../public/img/banner/pintade.jpg");
+  }
+  25% {
+    background-image: url("../../public/img/banner/porc.jpg");
+  }
+  50% {
+    background-image: url("../../public/img/banner/poule.jpg");
+  }
+  75% {
+    background-image: url("../../public/img/banner/veau.jpg");
+  }
+  100% {
+    background-image: url("../../public/img/banner/pintade.jpg");
+  }
 }
 
 .header {
@@ -373,5 +456,65 @@ a:hover {
 
 .illustration__img img {
   width: 32.25806%;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px;
+  margin: 10px 0;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  background-color: #C4C4C4;
+}
+
+.about__content {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  border: 1px solid #3A3A3C;
+  border-radius: 10px;
+  background-color: #3A3A3C;
+  margin: 10px 5px 0;
+  text-indent: 15px;
+  padding: 0 0 5px 5px;
+}
+
+.about__content h2 {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Sofia", "Arial", sans-serif;
+  color: #F58C21;
+}
+
+.about__slide1 {
+  margin: 10px 0 25px;
+  min-width: 320px;
+  height: 198.4px;
+  -webkit-box-shadow: 0px 15px 10px -5px #777;
+  box-shadow: 0px 15px 10px -5px #777;
+  background-size: contain;
+  margin-left: 10px;
+  -webkit-animation: slide1 15s ease-in-out infinite both;
+          animation: slide1 15s ease-in-out infinite both;
+}
+
+.about__slide2 {
+  margin: 10px 0 25px;
+  min-width: 320px;
+  height: 198.4px;
+  -webkit-box-shadow: 0px 15px 10px -5px #777;
+  box-shadow: 0px 15px 10px -5px #777;
+  background-size: contain;
+  margin-right: 10px;
+  -webkit-animation: slide2 15s ease-in-out infinite both;
+          animation: slide2 15s ease-in-out infinite both;
 }
 /*# sourceMappingURL=style.css.map */

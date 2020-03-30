@@ -1,0 +1,18 @@
+.about__slide1 {
+    @include keyframes(slide1) {
+        0% {background-image: url("../../public/img/banner/agneau.jpg");}
+        25% {background-image: url("../../public/img/banner/canard.jpg");}
+        50% {background-image: url("../../public/img/banner/dindon.jpg");}
+        75% {background-image: url("../../public/img/banner/lapin.jpg");}
+        100% {background-image: url("../../public/img/banner/agneau.jpg");}
+    }
+}
+.about__slide2 {
+    @include keyframes (slide2) {
+        0% {background-image: url("../../public/img/banner/pintade.jpg");}
+        25% {background-image: url("../../public/img/banner/porc.jpg");}
+        50% {background-image: url("../../public/img/banner/poule.jpg");}
+        75% {background-image: url("../../public/img/banner/veau.jpg");}
+        100% {background-image: url("../../public/img/banner/pintade.jpg");}
+    }
+}
