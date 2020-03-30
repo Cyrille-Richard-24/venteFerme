@@ -13,6 +13,8 @@ $margin-tablet-language: 0 0 5px 20px !important;
 $margin-tablet-navbar: 10px 0 0 0 !important;
 
 // Padding
+$padding-mobile-item: 0 0 10px 0;
+$padding-tablet-item: 0 0 10px 0;
 
 // Size
 $size-mobile-header-title: 1.2rem !important;
@@ -81,6 +83,22 @@ $size-desktop-header-title: 1.9rem !important;
             }  
         }
     }
+    .selection {
+        &__item {
+            display: flex;
+            flex-direction: column;
+            padding: $padding-mobile-item;
+          &__firstRow, &__secondRow {
+              flex-direction: column;
+              img {
+                  margin: 10px 50px !important;
+              }
+          }
+          h2 {
+                  order: -1;
+              }
+        }
+    }
 }
 
 @include tablet {
@@ -102,6 +120,15 @@ $size-desktop-header-title: 1.9rem !important;
         flex-wrap: wrap;
         &__content {
             order: -1;
+        }
+    }
+    .selection {
+        &__item {
+            padding: $padding-tablet-item;
+        }
+        img {
+            width: 200px !important;
+            height: 133px !important;
         }
     }
 }
