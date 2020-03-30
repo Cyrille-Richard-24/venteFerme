@@ -198,3 +198,26 @@ $fontFamily-promotion-heading-level2: $family-sofia;
         }
     }
 }
+
+.delivery {
+    @include bg-border($bg-grey-dark, $radius-full, null);
+    padding: 10px 10px 10px 10px;
+    &__info {
+        @include bg-border($bg-dark, $radius-full, null) ;
+        h2 {
+            font-size: 2rem;
+            font-family: $family-sofia;
+            color: $heading-color-tertiary;
+            text-align: center;
+            i {
+             margin: 0 25px;
+            }
+        }
+        &__content {
+            padding: 0 10px 10px 10px;
+            p {
+                text-indent: 10px;
+            }
+        }
+    }
+}
