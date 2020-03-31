@@ -131,6 +131,9 @@
   .delivery h2 i {
     margin: 10px 10px 10px 10px  !important;
   }
+  .payment h2 {
+    font-size: 1.2rem !important;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -747,6 +750,7 @@ a:hover {
   border-radius: 10px;
   background-color: #C4C4C4;
   padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
 }
 
 .delivery__info {
@@ -772,5 +776,42 @@ a:hover {
 
 .delivery__info__content p {
   text-indent: 10px;
+}
+
+.payment {
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  background-color: #C4C4C4;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+}
+
+.payment__info {
+  border: 1px solid #3A3A3C;
+  border-radius: 10px;
+  background-color: #3A3A3C;
+}
+
+.payment__info h2 {
+  font-size: 2rem;
+  font-family: "Sofia", "Arial", sans-serif;
+  color: #F58C21;
+  text-align: center;
+}
+
+.payment__info__content {
+  padding: 0 10px 10px 10px;
+}
+
+.payment__info__content p {
+  text-indent: 10px;
+}
+
+.payment__info__content__logoCard {
+  text-align: center;
+}
+
+.payment__info__content__logoCard img {
+  margin: 10px 10px;
 }
 /*# sourceMappingURL=style.css.map */

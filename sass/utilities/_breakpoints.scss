@@ -125,6 +125,11 @@ $size-desktop-header-title: 1.9rem !important;
                }
         }
     }
+    .payment {
+        h2 {
+            font-size: 1.2rem !important;
+        }
+    }
 }
 
 @include tablet {
